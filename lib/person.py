@@ -16,8 +16,9 @@ APPROVED_JOBS = [
 ]
 
 class Person:
-    def __init__(self, name= "John Doe", job= "Admin"):
+    def __init__(self, name= "John Doe"):
         self.name = name
+    def __init__(self, job= "Admin"):
         self.job = job
     def get_name(self):
         return self._name
@@ -28,7 +29,7 @@ class Person:
         else:
             print("Name must be a string between 1 and 25.")
     name = property(get_name, set_name)
-    
+
     def get_job(self):
         return self._job
     
